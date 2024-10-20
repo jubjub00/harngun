@@ -12,6 +12,7 @@ export default function IndexPage() {
   return (
     <DefaultLayout>
       <section className="flex flex-col font-ibm items-center justify-center gap-4 py-8 md:py-10">
+        <span>test stg</span>
         {/* <div className="inline-block max-w-xl text-center justify-center">
           <span className={title()}>Make&nbsp;</span>
           <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
