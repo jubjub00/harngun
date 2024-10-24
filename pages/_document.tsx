@@ -1,6 +1,7 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import { fontIbm } from '@/config/fonts'
 import { cn } from '@nextui-org/theme'
+
+import { fontIbm } from '@/config/fonts'
 
 export default function Document() {
     return (
@@ -11,7 +12,9 @@ export default function Document() {
                     rel="stylesheet"
                 />
             </Head>
-            <body className={cn('min-h-screen font-ibm bg-background antialiased', fontIbm.variable)}>
+            <body
+                className={cn('min-h-screen font-ibm bg-background antialiased', fontIbm.variable)}
+            >
                 <Main />
                 <NextScript />
             </body>

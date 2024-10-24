@@ -1,6 +1,7 @@
 import { Navbar, NavbarContent, NavbarItem } from '@nextui-org/navbar'
 import Link from 'next/link'
 import { FaHome, FaFileInvoiceDollar, FaUserFriends, FaUser } from 'react-icons/fa'
+
 import { link, navTv } from '@/components/primitives'
 import { FooterProps } from '@/types/footer'
 
@@ -34,10 +35,10 @@ export const Footer = () => {
                 {navList.map((nav, key) => (
                     <NavbarItem
                         key={key}
-                        isActive={key === 0 ? true : false}
                         className={navTv({ active: key === 0 })}
+                        isActive={key === 0 ? true : false}
                     >
-                        <Link href={nav.link} className={link({ direct: 'cols' })}>
+                        <Link className={link({ direct: 'cols' })} href={nav.link}>
                             {nav.icon}
                             {nav.text}
                         </Link>
