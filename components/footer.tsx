@@ -39,29 +39,12 @@ export const Footer = () => {
                     const isActive = key === navActive
 
                     return (
-                        <NavbarItem
-                            key={key}
-                            className={navTv({ active: isActive })}
-                            isActive={isActive}
-                            onClick={() => setNavActive(key)}
-                        >
+                        <NavbarItem key={key} isActive={isActive} onClick={() => setNavActive(key)}>
                             <Link className={link({ direct: 'cols' })} href={nav.link}>
                                 <div className={navIconFooterTv({ active: isActive })}>
                                     {nav.icon}
                                 </div>
-                                <span className='absolute bottom-0'>{nav.text}</span> 
-
-
-
-                                {/* padding: 10px;
-    border-radius: 50%;
-    border: 5px solid white;
-    background: hsl(var(--nextui-primary) / .2);
-    position: absolute;
-    top: 0; */}
-
-
-
+                                <span className="absolute bottom-0">{nav.text}</span>
                             </Link>
                         </NavbarItem>
                     )
