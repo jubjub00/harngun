@@ -14,6 +14,7 @@ module.exports = {
                 sans: ['var(--font-sans)'],
                 mono: ['var(--font-mono)'],
                 ibm: ['var(--font-ibm)'],
+                noto: ['var(--font-noto)'],
             },
         },
     },

@@ -4,7 +4,7 @@ import { NextUIProvider } from '@nextui-org/system'
 import { ThemeProvider as NextThemesProvider } from 'next-themes'
 import { useRouter } from 'next/router'
 
-import { fontSans, fontMono, fontIbm } from '@/config/fonts'
+import { fontSans, fontMono, fontIbm, fontNoto } from '@/config/fonts'
 import '@/styles/globals.css'
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -25,4 +25,5 @@ export const fonts = {
     sans: fontSans.style.fontFamily,
     mono: fontMono.style.fontFamily,
     ibm: fontIbm.style.fontFamily,
+    noto: fontNoto.style.fontFamily,
 }

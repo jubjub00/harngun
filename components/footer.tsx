@@ -1,8 +1,9 @@
 import { Navbar, NavbarContent, NavbarItem } from '@nextui-org/navbar'
 import Link from 'next/link'
 import { FaHome, FaFileInvoiceDollar, FaUserFriends, FaUser } from 'react-icons/fa'
+import { useState } from 'react'
 
-import { link, navTv } from '@/components/primitives'
+import { link, navTv, navIconFooterTv } from '@/components/primitives'
 import { FooterProps } from '@/types/footer'
 
 const navList: FooterProps[] = [
@@ -23,27 +24,48 @@ const navList: FooterProps[] = [
     },
     {
         link: '#',
-        icon: <FaUser size={24} />,
+        icon: <FaUser size={20} />,
         text: 'ฉัน',
     },
 ]
 
 export const Footer = () => {
+    const [navActive, setNavActive] = useState(0)
+
     return (
-        <Navbar>
+        <Navbar className="bg-white">
             <NavbarContent className="grid grid-cols-4 grid-rows-1">
-                {navList.map((nav, key) => (
-                    <NavbarItem
-                        key={key}
-                        className={navTv({ active: key === 0 })}
-                        isActive={key === 0 ? true : false}
-                    >
-                        <Link className={link({ direct: 'cols' })} href={nav.link}>
-                            {nav.icon}
-                            {nav.text}
-                        </Link>
-                    </NavbarItem>
-                ))}
+                {navList.map((nav, key) => {
+                    const isActive = key === navActive
+
+                    return (
+                        <NavbarItem
+                            key={key}
+                            className={navTv({ active: isActive })}
+                            isActive={isActive}
+                            onClick={() => setNavActive(key)}
+                        >
+                            <Link className={link({ direct: 'cols' })} href={nav.link}>
+                                <div className={navIconFooterTv({ active: isActive })}>
+                                    {nav.icon}
+                                </div>
+                                <span className='absolute bottom-0'>{nav.text}</span> 
+
+
+
+                                {/* padding: 10px;
+    border-radius: 50%;
+    border: 5px solid white;
+    background: hsl(var(--nextui-primary) / .2);
+    position: absolute;
+    top: 0; */}
+
+
+
+                            </Link>
+                        </NavbarItem>
+                    )
+                })}
             </NavbarContent>
         </Navbar>
     )
