@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { FaHome, FaFileInvoiceDollar, FaUserFriends, FaUser } from 'react-icons/fa'
 import { useState } from 'react'
 
-import { link, navTv, navIconFooterTv } from '@/components/primitives'
+import { link, navIconFooterTv } from '@/components/primitives'
 import { FooterProps } from '@/types/footer'
 
 const navList: FooterProps[] = [
