@@ -11,9 +11,6 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['var(--font-sans)'],
-                mono: ['var(--font-mono)'],
-                ibm: ['var(--font-ibm)'],
                 noto: ['var(--font-noto)'],
             },
         },
@@ -25,7 +22,7 @@ module.exports = {
                 'purple-light': {
                     extend: 'light',
                     colors: {
-                        background: '#FEF9D9',
+                        background: '#eef2f7',
                         foreground: '#ffffff',
                         primary: {
                             50: '#eef2f7',

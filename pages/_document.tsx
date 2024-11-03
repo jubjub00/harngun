@@ -14,7 +14,7 @@ export default function Document() {
             </Head>
             <body
                 className={cn(
-                    'min-h-screen font-noto bg-background antialiased',
+                    'min-h-screen font-noto bg-background antialiased purple-light',
                     fontNoto.variable,
                 )}
             >
