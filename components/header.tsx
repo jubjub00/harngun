@@ -5,14 +5,19 @@ import { FaCalendarDay } from 'react-icons/fa'
 
 import { SearchIcon } from './icons'
 
-
-export const Header = () => {
+export const Header = ({ pickDatable }: { pickDatable?: boolean }) => {
     return (
         <Navbar className="bg-white">
             <NavbarContent className="items-center" justify="start">
                 <Input placeholder="search" startContent={<SearchIcon size={18} />} type="search" />
-                <FaCalendarDay size={24} />
-                <DateRangePicker className="hidden" label="Stay duration" />
+                {pickDatable ? (
+                    <>
+                        <FaCalendarDay size={24} />
+                        <DateRangePicker className="hidden" label="Stay duration" />
+                    </>
+                ) : (
+                    <></>
+                )}
             </NavbarContent>
         </Navbar>
     )

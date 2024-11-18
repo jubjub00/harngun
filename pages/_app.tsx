@@ -7,6 +7,8 @@ import { useRouter } from 'next/router'
 import { fontNoto } from '@/config/fonts'
 import '@/styles/globals.css'
 
+import { Footer } from '@/components/footer'
+
 export default function App({ Component, pageProps }: AppProps) {
     const router = useRouter()
 
@@ -16,6 +18,9 @@ export default function App({ Component, pageProps }: AppProps) {
                 <main>
                     <Component {...pageProps} />
                 </main>
+                <footer className="w-full fixed bottom-0">
+                    <Footer />
+                </footer>
             </NextThemesProvider>
         </NextUIProvider>
     )

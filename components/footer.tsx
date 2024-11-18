@@ -8,22 +8,22 @@ import { FooterProps } from '@/types/footer'
 
 const navList: FooterProps[] = [
     {
-        link: '#',
+        link: '/',
         icon: <FaHome size={24} />,
         text: 'หน้าหลัก',
     },
     {
-        link: '#',
+        link: '/history',
         icon: <FaFileInvoiceDollar size={24} />,
         text: 'ประวัติ',
     },
     {
-        link: '#',
+        link: '/relationship',
         icon: <FaUserFriends size={24} />,
         text: 'เพื่อน',
     },
     {
-        link: '#',
+        link: '/mind',
         icon: <FaUser size={20} />,
         text: 'ฉัน',
     },
