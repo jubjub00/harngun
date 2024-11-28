@@ -2,9 +2,11 @@ import { Navbar, NavbarContent, NavbarItem } from '@nextui-org/navbar'
 import Link from 'next/link'
 import { FaHome, FaFileInvoiceDollar, FaUserFriends, FaUser } from 'react-icons/fa'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 
 import { link, navIconFooterTv } from '@/components/primitives'
 import { FooterProps } from '@/types/footer'
+import { isRootPath } from '@/utils/String.utils'
 
 const navList: FooterProps[] = [
     {
@@ -30,7 +32,11 @@ const navList: FooterProps[] = [
 ]
 
 export const Footer = () => {
-    const [navActive, setNavActive] = useState(0)
+    const router = useRouter()
+    const pathname = router.pathname
+    const [navActive, setNavActive] = useState(
+        navList.findIndex((nav) => isRootPath(nav.link, pathname)) ?? 0,
+    )
 
     return (
         <Navbar className="bg-white">
