@@ -24,7 +24,6 @@ const spendList = [
         text: 'ฉัน',
     },
 
-
     {
         link: '#',
         icon: <FaUser size={20} />,
@@ -65,7 +64,7 @@ const spendList = [
 export const CardSpend = () => {
     return (
         <>
-            {spendList.map((_,key) => (
+            {spendList.map((_, key) => (
                 <Card key={key}>
                     <CardBody className="p-3 text-default-400">
                         <div className="flex justify-between items-start">
