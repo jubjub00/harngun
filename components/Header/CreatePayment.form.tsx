@@ -21,9 +21,7 @@ const CreatePaymentForm = forwardRef((props, ref) => {
         },
     })
 
-    const onSubmit = (data: unknown) => {
-        console.log('data', data)
-    }
+    const onSubmit = (_: unknown) => {}
 
     return (
         <Form onSubmit={handleSubmit(onSubmit)}>
