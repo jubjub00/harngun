@@ -1,6 +1,5 @@
-export function isRootPath(root: string, path: string): boolean {
-    root = root.replace(/\/+$/, '') || '/'
-    path = path.replace(/\/+$/, '') || '/'
+export function getFirstSegment(path: string): string {
+    const segments = path.split('/').filter((segment) => segment !== '')
 
-    return path.startsWith(root) && (path === root || path[root.length] === '/')
+    return segments.length > 0 ? segments[0] : ''
 }

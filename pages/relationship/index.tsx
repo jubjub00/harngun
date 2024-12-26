@@ -1,4 +1,4 @@
-import { RelationCard } from '@/components/relationship/RelationCard'
+import { RelationCard } from '@/components/Relationship/RelationCard'
 import SearchLayout from '@/layouts/header'
 
 export default function RelationshipPage() {

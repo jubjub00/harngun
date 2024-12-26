@@ -1,6 +1,4 @@
-import { Button } from '@nextui-org/button'
-import { Card, CardHeader, CardBody, CardFooter } from '@nextui-org/card'
-import Image from 'next/image'
+import { Card, CardBody } from '@nextui-org/react'
 import { FaUser, FaMoneyBillWave } from 'react-icons/fa'
 
 const spendList = [
