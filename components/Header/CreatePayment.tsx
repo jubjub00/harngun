@@ -27,24 +27,7 @@ export const CreatePayment = () => {
             <FaPlusCircle size={24} onClick={onOpen} />
             <Modal
                 backdrop="blur"
-                closeButton={
-                    <Button
-                        isIconOnly
-                        aria-label="Close"
-                        style={{
-                            position: 'absolute',
-                            top: '10px',
-                            right: '10px',
-                            zIndex: 1000,
-                            borderRadius: '50%',
-                            backgroundColor: 'transparent',
-                            cursor: 'pointer',
-                        }}
-                        onPress={onClose}
-                    >
-                        <FaTimes />
-                    </Button>
-                }
+                closeButton={<FaTimes size={30} style={{ right: '10px', top: '10px' }} />}
                 isOpen={isOpen}
                 placement="top-center"
                 onOpenChange={onOpenChange}
@@ -55,9 +38,11 @@ export const CreatePayment = () => {
                         <Form ref={formRef} />
                     </ModalBody>
                     <ModalFooter>
-                        <Button onPress={handleSubmitClick}>Submit</Button>
                         <Button color="danger" variant="flat" onPress={onClose}>
-                            Close
+                            ยกเลิก
+                        </Button>
+                        <Button color="primary" onPress={handleSubmitClick}>
+                            บันทึก
                         </Button>
                     </ModalFooter>
                 </ModalContent>
