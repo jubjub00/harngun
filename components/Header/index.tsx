@@ -13,7 +13,7 @@ export const Header = ({
 }) => {
     return (
         <Navbar className="bg-white">
-            <NavbarContent className="items-center" justify="start">
+            <NavbarContent className="items-center text-black" justify="start">
                 <Input placeholder="search" startContent={<SearchIcon size={18} />} type="search" />
                 {pickDatable && <FilterDate />}
                 {creatable && <CreatePayment />}

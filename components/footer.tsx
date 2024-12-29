@@ -49,7 +49,12 @@ export const Footer = () => {
                     const isActive = key === navActive
 
                     return (
-                        <NavbarItem key={key} isActive={isActive} onClick={() => setNavActive(key)}>
+                        <NavbarItem
+                            key={key}
+                            className="text-black"
+                            isActive={isActive}
+                            onClick={() => setNavActive(key)}
+                        >
                             <Link className={link({ direct: 'cols' })} href={nav.link}>
                                 <div className={navIconFooterTv({ active: isActive })}>
                                     {nav.icon}
