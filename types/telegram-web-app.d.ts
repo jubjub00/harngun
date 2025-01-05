@@ -1,15 +1,18 @@
-// telegram-web-app.d.ts
+export interface TelegramUserType {
+    id: number
+    first_name: string
+    last_name?: string
+    photo_url?: string
+    username?: string
+    language_code?: string
+    allows_write_to_pm?: boolean
+}
+
 interface Telegram {
     WebApp: {
         initData: string
         initDataUnsafe: {
-            user: {
-                id: number
-                first_name: string
-                last_name?: string
-                username?: string
-                language_code?: string
-            }
+            user: TelegramUserType
         }
         MainButton: {
             setText: (text: string) => Telegram['WebApp']['MainButton']
@@ -20,7 +23,8 @@ interface Telegram {
         setBackgroundColor: (color: string) => void
     }
 }
-
-interface Window {
-    Telegram?: Telegram
+declare global {
+    interface Window {
+        Telegram?: Telegram
+    }
 }
