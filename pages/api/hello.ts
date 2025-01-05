@@ -1,4 +1,3 @@
-import { prisma } from '@/prisma/prisma'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type GetData = {
