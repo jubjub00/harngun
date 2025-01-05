@@ -48,9 +48,6 @@ export default async function Handler(
 }
 
 async function getData(): Promise<GetData> {
-    const a = await prisma.user.findMany()
-    console.log('aaaa', a)
-
     return {
         id: 1,
         name: 'a',
