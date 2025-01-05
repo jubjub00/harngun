@@ -60,7 +60,7 @@ const spendList = [
     },
 ]
 
-export const RelationCard = () => {
+export const RelationshipCard = () => {
     return (
         <>
             {spendList.map((_, key) => (
