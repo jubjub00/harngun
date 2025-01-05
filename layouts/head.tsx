@@ -16,6 +16,14 @@ export const Head = () => {
                 name="viewport"
             />
             <link href="/favicon.ico" rel="icon" />
+            <script
+                async
+                src="https://telegram.org/js/telegram-web-app.js"
+                onLoad={() => {
+                    alert('Telegram WebApp script loaded')
+                    console.log('aaaaasdfs')
+                }}
+            />
         </NextHead>
     )
 }

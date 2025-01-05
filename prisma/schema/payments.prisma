@@ -1,0 +1,19 @@
+model payments {
+  id             Int             @id @default(autoincrement())
+  key            String          @unique @default(cuid())
+  created_dt     DateTime        @default(now())
+  updated_dt     DateTime        @default(now())
+  deleted_dt     DateTime
+  name           String
+  description    String?
+  status         Status          @default(PENDING)
+  slip_img       String?
+  payment_dt     DateTime
+  total_amount   Int
+  payer_name     String
+  reporter_name  String
+  vat            Int
+  service_charge Int
+
+  payment_items  payment_items[]
+}

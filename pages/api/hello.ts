@@ -1,3 +1,4 @@
+import { prisma } from '@/prisma/prisma'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type GetData = {
@@ -14,14 +15,14 @@ type Error = {
     error: string
 }
 
-export default function Handler(
+export default async function Handler(
     req: NextApiRequest,
     res: NextApiResponse<GetData | PostData | Error>,
 ) {
     try {
         switch (req.method) {
             case 'GET': {
-                const result = getData()
+                const result = await getData()
 
                 return res.status(200).json(result)
             }
@@ -46,7 +47,10 @@ export default function Handler(
     }
 }
 
-function getData(): GetData {
+async function getData(): Promise<GetData> {
+    const a = await prisma.user.findMany()
+    console.log('aaaa', a)
+
     return {
         id: 1,
         name: 'a',

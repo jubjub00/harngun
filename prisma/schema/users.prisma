@@ -1,0 +1,15 @@
+model users {
+  id         Int      @id @default(autoincrement())
+  key        String   @unique @default(cuid())
+  created_dt DateTime @default(now())
+  updated_dt DateTime @default(now())
+  deleted_dt DateTime
+
+  img         String?
+  telegram_id Int
+  first_name  String
+  last_name   String
+  username    String
+
+  payment_items payment_items[]
+}

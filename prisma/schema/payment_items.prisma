@@ -1,0 +1,16 @@
+model payment_items {
+  id         Int      @id @default(autoincrement())
+  key        String   @unique @default(cuid())
+  created_dt DateTime @default(now())
+  updated_dt DateTime @default(now())
+  deleted_dt DateTime
+
+  item_name                 String
+  item_price                Int
+
+  users     users @relation(fields: [divisor_key], references: [key])
+  divisor_key                  String
+
+  payments     payments @relation(fields: [payments_key], references: [key])
+  payments_key String
+}
