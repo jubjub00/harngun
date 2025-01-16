@@ -2,7 +2,7 @@ import crypto from 'crypto'
 
 import { NextApiRequest, NextApiResponse } from 'next'
 
-export const post = (req: NextApiRequest, res: NextApiResponse<any>) => {
+export const post = (req: NextApiRequest, res: NextApiResponse) => {
     const { user, hash } = req.body
 
     if (!user || !hash) {

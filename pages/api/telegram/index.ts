@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 
 import { post } from './service'
 
-export default async function Handler(req: NextApiRequest, res: NextApiResponse<any>) {
+export default async function Handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === 'POST') {
         return post(req, res)
     } else {
