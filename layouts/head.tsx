@@ -8,10 +8,17 @@ export const Head = () => {
     const { setUser } = useGlobalState()
 
     useEffect(() => {
+        console.log('window.Telegram.WebApp', window?.Telegram?.WebApp)
+
         if (typeof window !== 'undefined' && window?.Telegram?.WebApp) {
             const webApp = window.Telegram.WebApp
 
-            setUser(webApp.initDataUnsafe?.user)
+            fetch('/api/telegram', {
+                body: { user: webApp.initDataUnsafe?.user, hash: webApp.initData },
+                method: 'POST',
+            }).then(() => {
+                setUser(webApp.initDataUnsafe?.user)
+            })
         }
     }, [])
 
