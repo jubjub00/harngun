@@ -12,9 +12,13 @@ export const Head = () => {
 
         if (typeof window !== 'undefined' && window?.Telegram?.WebApp) {
             const webApp = window.Telegram.WebApp
+            const body = new FormData()
+
+            body.append(user, webApp.initDataUnsafe?.user)
+            body.append(hash, webApp.initData)
 
             fetch('/api/telegram', {
-                body: { user: webApp.initDataUnsafe?.user, hash: webApp.initData },
+                body,
                 method: 'POST',
             }).then(() => {
                 setUser(webApp.initDataUnsafe?.user)
