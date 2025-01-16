@@ -11,7 +11,7 @@ export default function MindPage() {
             <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 mb-[4rem]">
                 <Card fullWidth={true} shadow="sm">
                     <CardHeader className="flex items-center justify-center">
-                        <Avatar size="lg" src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
+                        <Avatar size="lg" src={user?.photo_url} />
                     </CardHeader>
                     <CardBody className="p-3 text-default-400">
                         <div className="flex justify-between">
