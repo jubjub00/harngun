@@ -8,7 +8,7 @@ export const Head = () => {
     const { setUser } = useGlobalState()
 
     useEffect(() => {
-        console.log('window.Telegram.WebApp', window?.Telegram?.WebApp)
+        console.log('window.Telegram.WebApp z', window?.Telegram?.WebApp)
 
         if (typeof window !== 'undefined' && window?.Telegram?.WebApp) {
             const webApp = window.Telegram.WebApp
