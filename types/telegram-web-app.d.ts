@@ -8,12 +8,15 @@ export interface TelegramUserType {
     allows_write_to_pm?: boolean
 }
 
+export interface IinitDataUnsafe {
+    user: TelegramUserType
+    hash: string
+}
+
 interface Telegram {
     WebApp: {
         initData: string
-        initDataUnsafe: {
-            user: TelegramUserType
-        }
+        initDataUnsafe: IinitDataUnsafe
         MainButton: {
             setText: (text: string) => Telegram['WebApp']['MainButton']
             show: () => Telegram['WebApp']['MainButton']

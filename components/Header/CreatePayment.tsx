@@ -24,7 +24,7 @@ export const CreatePayment = () => {
 
     return (
         <>
-            <FaPlusCircle size={24} onClick={onOpen} />
+            <FaPlusCircle className="cursor-pointer" size={24} onClick={onOpen} />
             <Modal
                 backdrop="blur"
                 closeButton={<FaTimes size={30} style={{ right: '10px', top: '10px' }} />}

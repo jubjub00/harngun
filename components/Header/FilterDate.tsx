@@ -15,7 +15,7 @@ export const FilterDate = () => {
 
     return (
         <>
-            <FaCalendarDay size={24} onClick={onOpen} />
+            <FaCalendarDay className="cursor-pointer" size={24} onClick={onOpen} />
             <Modal
                 backdrop="blur"
                 closeButton={<FaTimes size={30} style={{ right: '10px', top: '10px' }} />}
