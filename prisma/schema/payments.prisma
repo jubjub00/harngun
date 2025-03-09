@@ -3,17 +3,18 @@ model payments {
   key            String          @unique @default(cuid())
   created_dt     DateTime        @default(now())
   updated_dt     DateTime        @default(now())
-  deleted_dt     DateTime
-  name           String
+  deleted_dt     DateTime?
   description    String?
   status         Status          @default(PENDING)
   slip_img       String?
-  payment_dt     DateTime
+  payment_dt     DateTime?
   total_amount   Int
   payer_name     String
   reporter_name  String
-  vat            Int
-  service_charge Int
-
+  vat            Int?
+  service_charge Int?
+  title          String
+  companions     String          @db.VarChar
+  is_equally     Boolean?        @default(false)
   payment_items  payment_items[]
 }

@@ -7,7 +7,7 @@ import {
     useDisclosure,
     DateRangePicker,
     ModalHeader,
-} from '@nextui-org/react'
+} from '@heroui/react'
 import { FaCalendarDay, FaTimes } from 'react-icons/fa'
 
 export const FilterDate = () => {

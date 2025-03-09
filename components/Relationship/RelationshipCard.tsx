@@ -1,4 +1,4 @@
-import { Card, CardBody, Avatar } from '@nextui-org/react'
+import { Card, CardBody, Avatar } from '@heroui/react'
 import { FaUser, FaChevronRight } from 'react-icons/fa'
 
 const spendList = [

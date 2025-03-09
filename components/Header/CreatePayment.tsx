@@ -8,7 +8,7 @@ import {
     ModalFooter,
     Button,
     useDisclosure,
-} from '@nextui-org/react'
+} from '@heroui/react'
 
 import Form from './CreatePayment.form'
 
@@ -29,7 +29,7 @@ export const CreatePayment = () => {
                 backdrop="blur"
                 closeButton={<FaTimes size={30} style={{ right: '10px', top: '10px' }} />}
                 isOpen={isOpen}
-                placement="top-center"
+                placement="top"
                 onOpenChange={onOpenChange}
             >
                 <ModalContent className="mt-4">

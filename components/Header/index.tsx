@@ -1,4 +1,4 @@
-import { Navbar, NavbarContent, Input } from '@nextui-org/react'
+import { Navbar, NavbarContent, Input } from '@heroui/react'
 
 import { SearchIcon } from '@/components/icons'
 import { CreatePayment } from '@/components/Header/CreatePayment'

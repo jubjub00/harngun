@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardBody, Avatar, Divider } from '@nextui-org/react'
+import { Card, CardHeader, CardBody, Avatar, Divider } from '@heroui/react'
 
 import DefaultLayout from '@/layouts/default'
 import useGlobalState from '@/store/globalState'

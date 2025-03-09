@@ -17,7 +17,6 @@ export default function App({ Component, pageProps }: AppProps) {
     useEffect(() => {
         if (typeof window !== 'undefined' && window?.Telegram?.WebApp) {
             const webApp = window.Telegram.WebApp
-            
             //verify
             // fetch('/api/telegram', {
             //     method: 'POST',
