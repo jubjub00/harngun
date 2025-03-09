@@ -1,5 +1,5 @@
 import { Input, Image } from '@heroui/react'
-import { ChangeEventHandler, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { Control, Controller, FieldPath, FieldValues, RegisterOptions } from 'react-hook-form'
 import { AiOutlineFileImage } from 'react-icons/ai'
 
@@ -63,7 +63,7 @@ export default function UploadController<
                         onChange={async (e) => {
                             const data = await imgChanged(e)
 
-                            if(data?.filename){
+                            if (data?.filename) {
                                 onChange(data.filename)
                             }
                         }}

@@ -1,10 +1,5 @@
-import { Checkbox, cn, Select, SelectItem } from '@heroui/react'
+import { Checkbox } from '@heroui/react'
 import { Control, Controller, FieldPath, FieldValues, RegisterOptions } from 'react-hook-form'
-
-interface IList {
-    key: string
-    label: string
-}
 
 interface PropsComponent<
     TFieldValues extends FieldValues = FieldValues,

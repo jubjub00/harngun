@@ -33,15 +33,6 @@ const CreatePaymentForm = forwardRef((props, ref) => {
     })
 
     const onSubmit = (data: payments) => {
-        const formdata = new FormData()
-
-        formdata.append('title',data.title)
-
-        console.log('data',data);
-        
-        // if()
-        // formdata.append('slip_img', data.slip_img)
-
         fetch('/api/payment', {
             method: 'post',
             headers: {
@@ -89,8 +80,8 @@ const CreatePaymentForm = forwardRef((props, ref) => {
                 control={control}
                 label="เลือกรายชื่อ"
                 list={companionList}
-                rules={{ required: true }}
                 name="companions"
+                rules={{ required: true }}
             />
             <CheckboxController control={control} label="หารรวม" name="is_equally" />
             <div className="grid grid-cols-2 gap-4">
