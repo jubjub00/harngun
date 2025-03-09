@@ -3,12 +3,6 @@ import path from 'path'
 
 import { NextResponse } from 'next/server'
 
-export const config = {
-    api: {
-        bodyParser: false,
-    },
-}
-
 export async function POST(req: Request) {
     try {
         const formData = await req.formData()
